@@ -37,7 +37,7 @@ be useful for viewing which tests are effective
 
 ### Index Object Format
 
-```json
+```
 {
     "targets" : [<string>, ...],        // the tested modules
     "tests" : [                         // the tests run on the module
@@ -66,7 +66,7 @@ be useful for viewing which tests are effective
 
 ### Mutant Object Format
 
-```json
+```
 {
     "mutant_code" : <string>,           // entire mutation source code
     "number" : <int>,                   // the mutation number
