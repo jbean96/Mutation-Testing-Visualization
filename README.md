@@ -49,14 +49,14 @@ construct the `.html` files and place them into `html_output/`
 
 ## TODO
 
-- [] Add an overall view of the original Python program in `index.html` where all of the mutated sections
+- [ ] Add an overall view of the original Python program in `index.html` where all of the mutated sections
 are highlighted
     - Potentially make the lines clickable to see a view of the possible mutants that can be generated?
     - Or maybe some tooltip annotations saying what operator is being modified and how by which Mutation operator?
-- [] In each individual mutant report somehow indicate what the un-mutated code was so that the user can compare
+- [ ] In each individual mutant report somehow indicate what the un-mutated code was so that the user can compare
 the mutation to the original and conceive of how to write a test to kill that mutant or decide if it is equivalent
-- [] Add an option to mark a mutant as equivalent and then somehow store that information
-- [] Include a `tests.html` page that gives a list of the tests and the mutants that they killed? Could potentially
+- [ ] Add an option to mark a mutant as equivalent and then somehow store that information
+- [ ] Include a `tests.html` page that gives a list of the tests and the mutants that they killed? Could potentially
 be useful for viewing which tests are effective
 
 ## JSON Structure
