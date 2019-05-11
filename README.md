@@ -17,9 +17,35 @@ The input `.json` files must have a specific input format, see [below](#JSON_Str
 
 ## Examples
 
-Inside of the top level `examples` directory there are two files, `my_class.py` and `my_class_test.py` and then
-an associated folder `output` that contains the corresponding `.json` output that needs to be generated for
-the program to generate the HTML report.
+Inside of the top level `examples` directory there are two files, `my_class.py` and `my_class_test.py` to generate
+example `.json` files we can use the modified version of `mutpy` included in the top level directory.
+
+### Install Modified Version of MutPy
+
+I'd recommend creating a activating new anaconda environment with a version of 3.7 with:
+```
+conda create -n test_env python=3.7
+conda activate test_env
+```
+and then navigating to the `mutpy` folder contained in this repository and running:
+```
+pip install -e .
+```
+Which will install the modified `mutpy` for this conda environment.
+
+To generate the example `.json` folders run:
+```
+mut.py --target my_class --unit-test my_class_test --report-html output
+```
+This will take the module `my_class.py` from the current directory and mutate it and then run
+the tests in the test suite `my_class_test.py` and generate the `.json` output files to the `output/` folder
+
+To create the example HTML files we then navigate back up to the top-level directory and run:
+```
+python generate_html.py example/output/ html_output/
+```
+which will take the `.json` files in `example/output/` that you generated with the previous command and 
+construct the `.html` files and place them into `html_output/`
 
 ## TODO
 
