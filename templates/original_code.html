@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block title %}Original Module{% endblock %}
+
+{% block content %}
+<pre class="brush: python; first-line: {{ original_code|length - original_code.lstrip()|length + 1 }}; highlight : [{% for mut in mutations.mutations %}{{ mut.lineno }}{% if not loop.last %}, {% endif %}{% endfor %}]; toolbar: false;">{{ original_code }}</pre>
+{% endblock %}

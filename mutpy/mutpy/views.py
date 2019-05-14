@@ -293,7 +293,7 @@ class HTMLReportView(AccReportView):
             'number_of_tests': self.number_of_tests,
             'score': score.get_dict(),
             'duration': duration,
-            'mutations': self.mutation_info,
+            # 'mutations': self.mutation_info,
             'date_now': str(datetime.datetime.now()),
         }
         with open(os.path.join(self.dir_name, "index.json"), 'w') as out_file:

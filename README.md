@@ -6,14 +6,13 @@
 arguments which are as follows:
 
 - `input_directory`, the input directory containing the `.json` files to generate the HTML report out of
-    - In the top level of the directory there must be an `index.json` file accompanied by a `mutants/` folder
-    containing `.json` files for each of the mutants
-        - This may change soon given that `index.json` contains all of the mutant objects already
+    - In the top level of the directory there must be `index.json` and `input_paths.json` files accompanied
+    by a `mutants/` folder containing `.json` files for each of the mutants
 - `output_directory`, the directory to write the generated `.html` files to
-    - Will have the same structure as the input directory, a top level `index.html` file accompanies by a
-    `mutants` folder containing a `.html` file for each of the generated mutants
+    - Will have a similar structure to the input directory, top level `index.html` and `original_code.html` files 
+    accompanied by a `mutants` folder containing a `.html` file for each of the generated mutants
 
-The input `.json` files must have a specific input format, see [below](#JSON_Structure)
+The input `.json` files must have a specific input format, see [below](#json-structure)
 
 ## Examples
 
@@ -33,7 +32,7 @@ pip install -e .
 ```
 Which will install the modified `mutpy` for this conda environment.
 
-To generate the example `.json` folders run:
+To generate the example `.json` files run:
 ```
 mut.py --target my_class --unit-test my_class_test --report-html output
 ```
@@ -82,13 +81,13 @@ be useful for viewing which tests are effective
         "all_mutants" : <int>           // total number of mutants
     },
     "duration" : <float>,               // duration of the testing process
-    "mutations" : [                     // list of all generated mutants
-        <mutation object format>,       // see below
-        ...
-    ],
     "date_now" : <string>               // the date/time that the mutants were generated/tested
 }
 ```
+
+### Input Paths Object Format
+
+TODO
 
 ### Mutant Object Format
 
